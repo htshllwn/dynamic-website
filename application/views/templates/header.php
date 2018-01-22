@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Dynamic Website</a>
+      <a class="navbar-brand" href="<?php echo base_url(); ?>">Dynamic Website</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,7 +43,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institutions <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url(); ?>institutions">View Institutions</a></li>
-            <li><a href="#">Create Institution</a></li>  
+            <li><a href="<?php echo base_url(); ?>institutions/new_institution">Create Institution</a></li>  
           </ul>
         </li>
 
@@ -99,10 +99,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-
-
-
-    <h1>Hello, world!</h1>
-
-   

@@ -2,8 +2,8 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 22, 2018 at 10:21 AM
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 22, 2018 at 04:00 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -31,10 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `institutions` (
   `id` int(11) NOT NULL,
   `institution_name` varchar(255) NOT NULL,
-  `institution_add` text NOT NULL,
-  `institution_phone1` int(11) NOT NULL,
+  `institution_add` text,
+  `institution_phone1` int(11) DEFAULT NULL,
   `institution_phone2` int(11) DEFAULT NULL,
-  `institution_email` varchar(255) NOT NULL
+  `institution_email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -62,7 +62,7 @@ ALTER TABLE `institutions`
 -- AUTO_INCREMENT for table `institutions`
 --
 ALTER TABLE `institutions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
