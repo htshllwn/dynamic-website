@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>All users</h2><br>
+    <h2>All Users</h2><br>
     <a class="btn btn-default" href="<?php echo base_url().'users/new_user'; ?>"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New</a>
     <br><br>
     <div class="table-responsive">
