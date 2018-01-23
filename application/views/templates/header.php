@@ -50,8 +50,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Create User</a></li>
-            <li><a href="#">View Users</a></li>
+            <li><a href="<?php echo base_url(); ?>users">View Users</a></li>
+            <li><a href="<?php echo base_url(); ?>users/new_user">Create User</a></li>
           </ul>
         </li>
 

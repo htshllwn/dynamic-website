@@ -2,8 +2,8 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jan 22, 2018 at 04:00 PM
+-- Host: 127.0.0.1
+-- Generation Time: Jan 23, 2018 at 07:16 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -42,7 +42,31 @@ CREATE TABLE `institutions` (
 --
 
 INSERT INTO `institutions` (`id`, `institution_name`, `institution_add`, `institution_phone1`, `institution_phone2`, `institution_email`) VALUES
-(1, 'JNCT', 'Bhopal', 987654321, NULL, 'jnct@bhopal.com');
+(1, 'JNCT', 'Bhopal', 987654321, NULL, 'jnct@bhopal.com'),
+(5, 'LNCT', 'Anand Nagar', 2147483647, NULL, 'no-reply@postmaster.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `user_full_name` varchar(255) NOT NULL,
+  `user_email` varchar(255) DEFAULT NULL,
+  `user_age` int(11) NOT NULL,
+  `user_interests` text,
+  `user_education` text,
+  `user_college` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `user_full_name`, `user_email`, `user_age`, `user_interests`, `user_education`, `user_college`) VALUES
+(1, 'Hitesh Lalwani', 'h@c.c', 20, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -55,6 +79,12 @@ ALTER TABLE `institutions`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,7 +92,12 @@ ALTER TABLE `institutions`
 -- AUTO_INCREMENT for table `institutions`
 --
 ALTER TABLE `institutions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

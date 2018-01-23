@@ -24,8 +24,6 @@
                 $data['mode'] = 'new';
             }
 
-            $this->load->helper('form');
-
             $this->form_validation->set_rules('name','Institution Name','required');
 
             if($this->form_validation->run() === FALSE){
